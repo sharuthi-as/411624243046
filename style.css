@@ -8,14 +8,19 @@ body{
     font-size: xx-large;
     font-weight: bolder;
 } */
-/* img{
-    height: 500px;
-    width: 500px;
-    border-radius: 500px;
-} */
+img{
+    height: auto;
+    width: 100%;
+    /* border-radius: 500px; */
+}
+@media(max-width:1024px){
+    img{
+        height: auto;
+        width: 100%;
+    }
+}
 video{
-    height: 500px;
-    width: 500px;
+    width: 100%;
 }
 ol{
     list-style-type: lower-roman;
@@ -42,8 +47,16 @@ button:hover{
 }
 nav{
     display: flex;
+    flex-direction:column;
+    /* gap:100px; */
+}
+@media(min-width: 1024px){
+    nav{
+    display: flex;
     flex-direction:row;
-    gap:100px;
+    gap: 100px;
+    }
+    
 }
 #p1{
     font-style: normal;
@@ -56,8 +69,13 @@ nav{
     font-size:x-large;
 }
 .grid{
-    display:grid;
-    grid-template-columns: 33% 33% 33%;
+    display: grid;
+}
+@media(min-width:1024px){
+    .grid{
+    display: grid;
+    grid-template-rows: 33% 33% 33%;
+}
 }
 /*#d1{
     grid-row: 1/2;
